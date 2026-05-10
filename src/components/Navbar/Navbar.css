@@ -10,22 +10,82 @@
     z-index: 1;
 }
 
-.navbar .left {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.navbar-left img {
-    width: 90px;
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .navbar-left ul {
     display: flex;
-    list-style: none;
+    align-items: center;
     gap: 20px;
 }
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar-logo {
+  width: 90px;
+  height: auto;
+  cursor: pointer;
+}
+
+.navbar-search,
+.navbar-bell {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar-profile-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.navbar-caret {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
 .navbar-left ul li {
+  cursor: pointer;
+}
+
+.navbar .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    background: #191919;
+    padding: 18px 22px;
+    border-radius: 2px;
+    text-decoration: underline;
+    z-index: 1;
+    display: none;
+}
+
+.navbar .dropdown p {
+    font-size: 13px;
     cursor: pointer;
+}
+
+.navbar-profile:hover .dropdown {
+    display: block;
 }
